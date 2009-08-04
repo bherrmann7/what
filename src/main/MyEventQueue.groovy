@@ -37,7 +37,10 @@ class MyEventQueue extends EventQueue {
             lastActivity = System.currentTimeMillis()
         }
         if (event instanceof KeyEvent && event.keyCode == 83 && event.getKeyModifiersText(event.modifiers) == "Ctrl") {
-            what()
+            what(true)
+        }
+        if (event instanceof KeyEvent && event.keyCode == 27) {
+            what(false)
         }
         super.dispatchEvent(event);
     }

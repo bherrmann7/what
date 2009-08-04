@@ -9,9 +9,12 @@ class WhatController {
    }
 
 
-    def saveAndExitCommand = {
-        model.text = view.ta.text
-        model.save()
+    def saveAndExitCommand = {  it ->
+
+        if(it) {
+            model.text = view.ta.text
+            model.save()
+        }
 
         System.exit(0)
     }
