@@ -17,4 +17,8 @@ class WhatModel {
         file.text = text;
         println "Saved $text"
     }
+
+    String getTally() {
+        new Tally().doTally(file);
+    }
 }
