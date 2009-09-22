@@ -19,6 +19,7 @@ class WhatModel {
     }
 
     String getTally() {
-        new Tally().doTally(file);
+        println "Doing tally on "+text
+        new Tally().doTally(text);
     }
 }

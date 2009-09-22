@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project relativePaths="false" version="4">
-  <component name="AntConfiguration">
-    <defaultAnt bundledAnt="true" />
-  </component>
   <component name="BuildJarProjectSettings">
     <option name="BUILD_JARS_ON_MAKE" value="false" />
   </component>
@@ -33,275 +30,11 @@
   <component name="CopyrightManager" default="">
     <module2copyright />
   </component>
-  <component name="DBNavigator.Project.ConnectionManager">
-    <connections />
-  </component>
-  <component name="DBNavigator.Project.DatabaseBrowserManager">
-    <autoscroll-to-editor value="false" />
-    <autoscroll-from-editor value="false" />
-  </component>
-  <component name="DBNavigator.Project.MethodExecutionManager">
-    <execution-inputs />
-  </component>
-  <component name="DBNavigator.Project.Settings">
-    <dataset-editor-settings>
-      <autopopup-text-editor active="true" active-if-empty="false" data-length-threshold="100" delay="1000" />
-      <values-list-popup>
-        <active-for-primary-keys value="false" />
-        <threshold-upper-limit value="1000" />
-      </values-list-popup>
-      <general>
-        <fetch-block-size value="100" />
-        <fetch-timeout value="20" />
-        <trim-whitespaces value="true" />
-        <convert-empty-strings-to-null value="true" />
-      </general>
-      <filters>
-        <prompt-filter-dialog value="true" />
-        <default-filter-type value="BASIC" />
-      </filters>
-    </dataset-editor-settings>
-    <code-completion-settings>
-      <filters>
-        <basic-filter>
-          <filter-element type="RESERVED_WORD" id="keyword" selected="true" />
-          <filter-element type="RESERVED_WORD" id="function" selected="false" />
-          <filter-element type="RESERVED_WORD" id="parameter" selected="false" />
-          <filter-element type="RESERVED_WORD" id="datatype" selected="true" />
-          <filter-element type="OBJECT" id="schema" selected="true" />
-          <filter-element type="OBJECT" id="user" selected="true" />
-          <user-schema>
-            <filter-element type="OBJECT" id="table" selected="true" />
-            <filter-element type="OBJECT" id="view" selected="true" />
-            <filter-element type="OBJECT" id="materialized_view" selected="true" />
-            <filter-element type="OBJECT" id="index" selected="true" />
-            <filter-element type="OBJECT" id="constraint" selected="true" />
-            <filter-element type="OBJECT" id="trigger" selected="true" />
-            <filter-element type="OBJECT" id="synonym" selected="false" />
-            <filter-element type="OBJECT" id="sequence" selected="true" />
-            <filter-element type="OBJECT" id="procedure" selected="true" />
-            <filter-element type="OBJECT" id="function" selected="true" />
-            <filter-element type="OBJECT" id="package" selected="true" />
-            <filter-element type="OBJECT" id="type" selected="true" />
-            <filter-element type="OBJECT" id="dimension" selected="true" />
-            <filter-element type="OBJECT" id="cluster" selected="true" />
-            <filter-element type="OBJECT" id="dblink" selected="true" />
-          </user-schema>
-          <public-schema>
-            <filter-element type="OBJECT" id="table" selected="false" />
-            <filter-element type="OBJECT" id="view" selected="false" />
-            <filter-element type="OBJECT" id="materialized_view" selected="false" />
-            <filter-element type="OBJECT" id="index" selected="false" />
-            <filter-element type="OBJECT" id="constraint" selected="false" />
-            <filter-element type="OBJECT" id="trigger" selected="false" />
-            <filter-element type="OBJECT" id="synonym" selected="false" />
-            <filter-element type="OBJECT" id="sequence" selected="false" />
-            <filter-element type="OBJECT" id="procedure" selected="false" />
-            <filter-element type="OBJECT" id="function" selected="false" />
-            <filter-element type="OBJECT" id="package" selected="false" />
-            <filter-element type="OBJECT" id="type" selected="false" />
-            <filter-element type="OBJECT" id="dimension" selected="false" />
-            <filter-element type="OBJECT" id="cluster" selected="false" />
-            <filter-element type="OBJECT" id="dblink" selected="false" />
-          </public-schema>
-          <any-schema>
-            <filter-element type="OBJECT" id="table" selected="true" />
-            <filter-element type="OBJECT" id="view" selected="true" />
-            <filter-element type="OBJECT" id="materialized_view" selected="true" />
-            <filter-element type="OBJECT" id="index" selected="true" />
-            <filter-element type="OBJECT" id="constraint" selected="true" />
-            <filter-element type="OBJECT" id="trigger" selected="true" />
-            <filter-element type="OBJECT" id="synonym" selected="true" />
-            <filter-element type="OBJECT" id="sequence" selected="true" />
-            <filter-element type="OBJECT" id="procedure" selected="true" />
-            <filter-element type="OBJECT" id="function" selected="true" />
-            <filter-element type="OBJECT" id="package" selected="true" />
-            <filter-element type="OBJECT" id="type" selected="true" />
-            <filter-element type="OBJECT" id="dimension" selected="true" />
-            <filter-element type="OBJECT" id="cluster" selected="true" />
-            <filter-element type="OBJECT" id="dblink" selected="true" />
-          </any-schema>
-        </basic-filter>
-        <smart-filter>
-          <filter-element type="RESERVED_WORD" id="keyword" selected="true" />
-          <filter-element type="RESERVED_WORD" id="function" selected="true" />
-          <filter-element type="RESERVED_WORD" id="parameter" selected="true" />
-          <filter-element type="RESERVED_WORD" id="datatype" selected="true" />
-          <filter-element type="OBJECT" id="schema" selected="true" />
-          <filter-element type="OBJECT" id="user" selected="true" />
-          <user-schema>
-            <filter-element type="OBJECT" id="table" selected="true" />
-            <filter-element type="OBJECT" id="view" selected="true" />
-            <filter-element type="OBJECT" id="materialized_view" selected="true" />
-            <filter-element type="OBJECT" id="index" selected="true" />
-            <filter-element type="OBJECT" id="constraint" selected="true" />
-            <filter-element type="OBJECT" id="trigger" selected="true" />
-            <filter-element type="OBJECT" id="synonym" selected="true" />
-            <filter-element type="OBJECT" id="sequence" selected="true" />
-            <filter-element type="OBJECT" id="procedure" selected="true" />
-            <filter-element type="OBJECT" id="function" selected="true" />
-            <filter-element type="OBJECT" id="package" selected="true" />
-            <filter-element type="OBJECT" id="type" selected="true" />
-            <filter-element type="OBJECT" id="dimension" selected="true" />
-            <filter-element type="OBJECT" id="cluster" selected="true" />
-            <filter-element type="OBJECT" id="dblink" selected="true" />
-          </user-schema>
-          <public-schema>
-            <filter-element type="OBJECT" id="table" selected="true" />
-            <filter-element type="OBJECT" id="view" selected="true" />
-            <filter-element type="OBJECT" id="materialized_view" selected="true" />
-            <filter-element type="OBJECT" id="index" selected="true" />
-            <filter-element type="OBJECT" id="constraint" selected="true" />
-            <filter-element type="OBJECT" id="trigger" selected="true" />
-            <filter-element type="OBJECT" id="synonym" selected="true" />
-            <filter-element type="OBJECT" id="sequence" selected="true" />
-            <filter-element type="OBJECT" id="procedure" selected="true" />
-            <filter-element type="OBJECT" id="function" selected="true" />
-            <filter-element type="OBJECT" id="package" selected="true" />
-            <filter-element type="OBJECT" id="type" selected="true" />
-            <filter-element type="OBJECT" id="dimension" selected="true" />
-            <filter-element type="OBJECT" id="cluster" selected="true" />
-            <filter-element type="OBJECT" id="dblink" selected="true" />
-          </public-schema>
-          <any-schema>
-            <filter-element type="OBJECT" id="table" selected="true" />
-            <filter-element type="OBJECT" id="view" selected="true" />
-            <filter-element type="OBJECT" id="materialized_view" selected="true" />
-            <filter-element type="OBJECT" id="index" selected="true" />
-            <filter-element type="OBJECT" id="constraint" selected="true" />
-            <filter-element type="OBJECT" id="trigger" selected="true" />
-            <filter-element type="OBJECT" id="synonym" selected="true" />
-            <filter-element type="OBJECT" id="sequence" selected="true" />
-            <filter-element type="OBJECT" id="procedure" selected="true" />
-            <filter-element type="OBJECT" id="function" selected="true" />
-            <filter-element type="OBJECT" id="package" selected="true" />
-            <filter-element type="OBJECT" id="type" selected="true" />
-            <filter-element type="OBJECT" id="dimension" selected="true" />
-            <filter-element type="OBJECT" id="cluster" selected="true" />
-            <filter-element type="OBJECT" id="dblink" selected="true" />
-          </any-schema>
-        </smart-filter>
-      </filters>
-      <sorting enabled="false">
-        <sorting-element type="RESERVED_WORD" id="keyword" />
-        <sorting-element type="RESERVED_WORD" id="datatype" />
-        <sorting-element type="OBJECT" id="column" />
-        <sorting-element type="OBJECT" id="table" />
-        <sorting-element type="OBJECT" id="view" />
-        <sorting-element type="OBJECT" id="materialized_view" />
-        <sorting-element type="OBJECT" id="index" />
-        <sorting-element type="OBJECT" id="constraint" />
-        <sorting-element type="OBJECT" id="trigger" />
-        <sorting-element type="OBJECT" id="synonym" />
-        <sorting-element type="OBJECT" id="sequence" />
-        <sorting-element type="OBJECT" id="procedure" />
-        <sorting-element type="OBJECT" id="function" />
-        <sorting-element type="OBJECT" id="package" />
-        <sorting-element type="OBJECT" id="type" />
-        <sorting-element type="OBJECT" id="dimension" />
-        <sorting-element type="OBJECT" id="cluster" />
-        <sorting-element type="OBJECT" id="dblink" />
-        <sorting-element type="OBJECT" id="schema" />
-        <sorting-element type="RESERVED_WORD" id="function" />
-        <sorting-element type="RESERVED_WORD" id="parameter" />
-      </sorting>
-    </code-completion-settings>
-    <execution-engine-settings />
-    <ddl-file-settings>
-      <extensions>
-        <mapping file-type-id="VIEW" extensions="vw" />
-        <mapping file-type-id="TRIGGER" extensions="trg" />
-        <mapping file-type-id="PROCEDURE" extensions="prc" />
-        <mapping file-type-id="FUNCTION" extensions="fnc" />
-        <mapping file-type-id="PACKAGE" extensions="pkg" />
-        <mapping file-type-id="TRIGGER_SPEC" extensions="pks" />
-        <mapping file-type-id="TRIGGER_BODY" extensions="pkb" />
-        <mapping file-type-id="TYPE" extensions="tpe" />
-        <mapping file-type-id="TYPE_SPEC" extensions="tps" />
-        <mapping file-type-id="TYPE_BODY" extensions="tpb" />
-      </extensions>
-      <general>
-        <statement-postfix value="/" />
-        <lookup-ddl-files value="true" />
-        <create-ddl-files value="false" />
-      </general>
-    </ddl-file-settings>
-    <general-settings>
-      <regional-settings>
-        <date-format value="MEDIUM" />
-        <number-format value="UNGROUPED" />
-        <locale value="SYSTEM_DEFAULT" />
-      </regional-settings>
-    </general-settings>
-  </component>
-  <component name="DaemonCodeAnalyzer">
-    <disable_hints />
-  </component>
-  <component name="DebuggerManager">
-    <breakpoint_any>
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </breakpoint_any>
-    <breakpoint_rules />
-    <ui_properties />
-  </component>
   <component name="DependencyValidationManager">
     <option name="SKIP_IMPORT_STATEMENTS" value="false" />
   </component>
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
-  <component name="FacetAutodetectingManager">
-    <autodetection-disabled>
-      <facet-type id="Groovy">
-        <modules>
-          <module name="what">
-            <files>
-              <file url="file://$PROJECT_DIR$/griffon-app/conf/Application.groovy" />
-              <file url="file://$PROJECT_DIR$/griffon-app/conf/Builder.groovy" />
-              <file url="file://$PROJECT_DIR$/griffon-app/conf/Config.groovy" />
-              <file url="file://$PROJECT_DIR$/griffon-app/controllers/WhatController.groovy" />
-              <file url="file://$PROJECT_DIR$/griffon-app/lifecycle/Initialize.groovy" />
-              <file url="file://$PROJECT_DIR$/griffon-app/lifecycle/Ready.groovy" />
-              <file url="file://$PROJECT_DIR$/griffon-app/lifecycle/Shutdown.groovy" />
-              <file url="file://$PROJECT_DIR$/griffon-app/lifecycle/Startup.groovy" />
-              <file url="file://$PROJECT_DIR$/griffon-app/lifecycle/Stop.groovy" />
-              <file url="file://$PROJECT_DIR$/griffon-app/models/WhatModel.groovy" />
-              <file url="file://$PROJECT_DIR$/griffon-app/views/WhatView.groovy" />
-              <file url="file://$PROJECT_DIR$/src/main/MyEventQueue.groovy" />
-            </files>
-          </module>
-        </modules>
-      </facet-type>
-    </autodetection-disabled>
-  </component>
-  <component name="IdProvider" IDEtalkID="521EBAEBA123DDBF301D3AEC58F86C42" />
+  <component name="IdProvider" IDEtalkID="27D55D8036EFD4B0E6B695407E2FBF2B" />
   <component name="InspectionProjectProfileManager">
     <option name="PROJECT_PROFILE" value="Project Default" />
     <option name="USE_PROJECT_LEVEL_SETTINGS" value="false" />
@@ -313,13 +46,6 @@
       </profile>
     </profiles>
     <list size="0" />
-  </component>
-  <component name="JavacSettings">
-    <option name="DEBUGGING_INFO" value="true" />
-    <option name="GENERATE_NO_WARNINGS" value="false" />
-    <option name="DEPRECATION" value="true" />
-    <option name="ADDITIONAL_OPTIONS_STRING" value="" />
-    <option name="MAXIMUM_HEAP_SIZE" value="128" />
   </component>
   <component name="JavadocGenerationManager">
     <option name="OUTPUT_DIRECTORY" />
@@ -337,10 +63,6 @@
     <option name="HEAP_SIZE" />
     <option name="LOCALE" />
     <option name="OPEN_IN_BROWSER" value="true" />
-  </component>
-  <component name="ModuleEditorState">
-    <option name="LAST_EDITED_MODULE_NAME" />
-    <option name="LAST_EDITED_TAB_NAME" />
   </component>
   <component name="Palette2">
     <group name="Swing">
@@ -470,121 +192,46 @@
   <component name="ProjectKey">
     <option name="state" value="project:///home/bob/what/what.ipr" />
   </component>
-  <component name="ProjectLevelVcsManager">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
-  </component>
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/what.iml" filepath="$PROJECT_DIR$/what.iml" />
     </modules>
   </component>
-  <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
-  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
-  </component>
-  <component name="ResourceManagerContainer">
-    <option name="myResourceBundles">
-      <value>
-        <list size="0" />
-      </value>
-    </option>
-  </component>
-  <component name="RmicSettings">
-    <option name="IS_EANABLED" value="false" />
-    <option name="DEBUGGING_INFO" value="true" />
-    <option name="GENERATE_NO_WARNINGS" value="false" />
-    <option name="GENERATE_IIOP_STUBS" value="false" />
-    <option name="ADDITIONAL_OPTIONS_STRING" value="" />
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application" enabled="false" merge="false" runner="emma">
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit" enabled="false" merge="false" runner="emma">
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="ADDITIONAL_CLASS_PATH" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-    </configuration>
-    <list size="0" />
-    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
-      <Host>localhost</Host>
-      <Port>5050</Port>
-    </configuration>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnBranchConfigurationManager">
-    <option name="myVersion" value="124" />
-    <option name="mySupportsUserInfoFilter" value="true" />
-  </component>
-  <component name="SvnConfiguration">
-    <option name="USER" value="" />
-    <option name="PASSWORD" value="" />
-    <option name="LAST_MERGED_REVISION" />
-    <option name="UPDATE_RUN_STATUS" value="false" />
-    <option name="MERGE_DRY_RUN" value="false" />
-    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
-    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
-    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
   </component>
-  <component name="WebServicesPlugin" addRequiredLibraries="true" />
-  <component name="XPathView.XPathProjectComponent">
-    <history />
-    <find-history />
+  <component name="libraryTable">
+    <library name="Griffon 0.2-BETA">
+      <CLASSES>
+        <root url="jar:///opt/griffon/latest/lib/MultipleGradientPaint.jar!/" />
+        <root url="jar:///opt/griffon/latest/lib/commons-lang-2.1.jar!/" />
+        <root url="jar:///opt/griffon/latest/lib/ant.jar!/" />
+        <root url="jar:///opt/griffon/latest/lib/swingx-0.9.3.jar!/" />
+        <root url="jar:///opt/griffon/latest/lib/svnkit-1.2.0.jar!/" />
+        <root url="jar:///opt/griffon/latest/lib/commons-logging-1.1.jar!/" />
+        <root url="jar:///opt/griffon/latest/lib/asm-2.2.3.jar!/" />
+        <root url="jar:///opt/griffon/latest/lib/swing-worker.jar!/" />
+        <root url="jar:///opt/griffon/latest/lib/log4j-1.2.15.jar!/" />
+        <root url="jar:///opt/griffon/latest/lib/ant-launcher.jar!/" />
+        <root url="jar:///opt/griffon/latest/lib/ant-junit.jar!/" />
+        <root url="jar:///opt/griffon/latest/lib/jline-0.9.94.jar!/" />
+        <root url="jar:///opt/griffon/latest/lib/ant-nodeps.jar!/" />
+        <root url="jar:///opt/griffon/latest/lib/ant-trax.jar!/" />
+        <root url="jar:///opt/griffon/latest/lib/commons-cli-1.0.jar!/" />
+        <root url="jar:///opt/griffon/latest/lib/junit-3.8.2.jar!/" />
+        <root url="jar:///opt/griffon/latest/lib/groovy-all-1.6.4.jar!/" />
+        <root url="jar:///opt/griffon/latest/lib/swingxbuilder-0.1.6-SNAPSHOT.jar!/" />
+        <root url="jar:///opt/griffon/latest/lib/spring-2.5.6.jar!/" />
+        <root url="jar:///opt/griffon/latest/dist/griffon-rt-0.2-BETA.jar!/" />
+        <root url="jar:///opt/griffon/latest/dist/griffon-resources-0.2-BETA.jar!/" />
+        <root url="jar:///opt/griffon/latest/dist/griffon-cli-0.2-BETA.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
   </component>
 </project>
 

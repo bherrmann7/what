@@ -1,7 +1,7 @@
 actions {
     action(id: 'saveAndExitCommand',
             name: 'Save (CTRL-S)',
-            closure: { controller.saveAndExitCommand() }
+            closure: { controller.saveAndExitCommand(true) }
     )
 
 }
@@ -16,8 +16,7 @@ application(title: 'What are you doing?', pack: true, locationByPlatform: true) 
         }
         hglue()
         menuItem(text: "Tally", mnemonic: 't', actionPerformed: {
-            ta.text = model.tally
-            tally.show()
+            controller.makeTally()
         })
         menu(text: "Help") {
             menuItem(text: "About", mnemonic: 'A', actionPerformed: {about.show()})

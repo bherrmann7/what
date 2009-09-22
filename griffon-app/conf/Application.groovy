@@ -1,14 +1,12 @@
 mvcGroups {
-    root {
-        model = 'WhatModel'
-        view = 'WhatView'
-        controller = 'WhatController'
-    }
+	root {
+		model="WhatModel"
+		controller="WhatController"
+		view="WhatView"
+	}
 }
-
 application {
-    title="What"
-
-    // If you want some non-standard application class, apply it here
-    //frameClass = 'javax.swing.JFrame'
+	title="What"
+	startupGroups=["root"]
+	autoShutdown=true
 }
