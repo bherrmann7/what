@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project relativePaths="false" version="4">
+<project version="4">
   <component name="BuildJarProjectSettings">
     <option name="BUILD_JARS_ON_MAKE" value="false" />
   </component>
-  <component name="CodeStyleSettingsManager">
-    <option name="PER_PROJECT_SETTINGS" />
-    <option name="USE_PER_PROJECT_SETTINGS" value="false" />
-  </component>
   <component name="CompilerConfiguration">
     <option name="DEFAULT_COMPILER" value="Javac" />
-    <option name="DEPLOY_AFTER_MAKE" value="0" />
     <resourceExtensions>
       <entry name=".+\.(properties|xml|html|dtd|tld)" />
       <entry name=".+\.(gif|png|jpeg|jpg)" />
@@ -26,6 +21,7 @@
       <entry name="?*.tld" />
       <entry name="?*.ftl" />
     </wildcardResourcePatterns>
+    <annotationProcessing enabled="false" useClasspath="true" />
   </component>
   <component name="CopyrightManager" default="">
     <module2copyright />
@@ -35,18 +31,6 @@
   </component>
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
   <component name="IdProvider" IDEtalkID="27D55D8036EFD4B0E6B695407E2FBF2B" />
-  <component name="InspectionProjectProfileManager">
-    <option name="PROJECT_PROFILE" value="Project Default" />
-    <option name="USE_PROJECT_LEVEL_SETTINGS" value="false" />
-    <scopes />
-    <profiles>
-      <profile version="1.0" is_locked="false">
-        <option name="myName" value="Project Default" />
-        <option name="myLocal" value="false" />
-      </profile>
-    </profiles>
-    <list size="0" />
-  </component>
   <component name="JavadocGenerationManager">
     <option name="OUTPUT_DIRECTORY" />
     <option name="OPTION_SCOPE" value="protected" />
@@ -188,7 +172,6 @@
   <component name="ProjectDetails">
     <option name="projectName" value="what" />
   </component>
-  <component name="ProjectFileVersion" converted="true" />
   <component name="ProjectKey">
     <option name="state" value="project:///home/bob/what/what.ipr" />
   </component>
@@ -203,31 +186,32 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
   </component>
+  <component name="WebServicesPlugin" addRequiredLibraries="true" />
   <component name="libraryTable">
     <library name="Griffon 0.2-BETA">
       <CLASSES>
-        <root url="jar:///opt/griffon/latest/lib/MultipleGradientPaint.jar!/" />
-        <root url="jar:///opt/griffon/latest/lib/commons-lang-2.1.jar!/" />
-        <root url="jar:///opt/griffon/latest/lib/ant.jar!/" />
-        <root url="jar:///opt/griffon/latest/lib/swingx-0.9.3.jar!/" />
-        <root url="jar:///opt/griffon/latest/lib/svnkit-1.2.0.jar!/" />
-        <root url="jar:///opt/griffon/latest/lib/commons-logging-1.1.jar!/" />
-        <root url="jar:///opt/griffon/latest/lib/asm-2.2.3.jar!/" />
-        <root url="jar:///opt/griffon/latest/lib/swing-worker.jar!/" />
-        <root url="jar:///opt/griffon/latest/lib/log4j-1.2.15.jar!/" />
-        <root url="jar:///opt/griffon/latest/lib/ant-launcher.jar!/" />
-        <root url="jar:///opt/griffon/latest/lib/ant-junit.jar!/" />
-        <root url="jar:///opt/griffon/latest/lib/jline-0.9.94.jar!/" />
-        <root url="jar:///opt/griffon/latest/lib/ant-nodeps.jar!/" />
-        <root url="jar:///opt/griffon/latest/lib/ant-trax.jar!/" />
-        <root url="jar:///opt/griffon/latest/lib/commons-cli-1.0.jar!/" />
-        <root url="jar:///opt/griffon/latest/lib/junit-3.8.2.jar!/" />
-        <root url="jar:///opt/griffon/latest/lib/groovy-all-1.6.4.jar!/" />
-        <root url="jar:///opt/griffon/latest/lib/swingxbuilder-0.1.6-SNAPSHOT.jar!/" />
-        <root url="jar:///opt/griffon/latest/lib/spring-2.5.6.jar!/" />
-        <root url="jar:///opt/griffon/latest/dist/griffon-rt-0.2-BETA.jar!/" />
-        <root url="jar:///opt/griffon/latest/dist/griffon-resources-0.2-BETA.jar!/" />
-        <root url="jar:///opt/griffon/latest/dist/griffon-cli-0.2-BETA.jar!/" />
+        <root url="jar://$PROJECT_DIR$/../../griffon/latest/lib/MultipleGradientPaint.jar!/" />
+        <root url="jar://$PROJECT_DIR$/../../griffon/latest/lib/commons-lang-2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/../../griffon/latest/lib/ant.jar!/" />
+        <root url="jar://$PROJECT_DIR$/../../griffon/latest/lib/swingx-0.9.3.jar!/" />
+        <root url="jar://$PROJECT_DIR$/../../griffon/latest/lib/svnkit-1.2.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/../../griffon/latest/lib/commons-logging-1.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/../../griffon/latest/lib/asm-2.2.3.jar!/" />
+        <root url="jar://$PROJECT_DIR$/../../griffon/latest/lib/swing-worker.jar!/" />
+        <root url="jar://$PROJECT_DIR$/../../griffon/latest/lib/log4j-1.2.15.jar!/" />
+        <root url="jar://$PROJECT_DIR$/../../griffon/latest/lib/ant-launcher.jar!/" />
+        <root url="jar://$PROJECT_DIR$/../../griffon/latest/lib/ant-junit.jar!/" />
+        <root url="jar://$PROJECT_DIR$/../../griffon/latest/lib/jline-0.9.94.jar!/" />
+        <root url="jar://$PROJECT_DIR$/../../griffon/latest/lib/ant-nodeps.jar!/" />
+        <root url="jar://$PROJECT_DIR$/../../griffon/latest/lib/ant-trax.jar!/" />
+        <root url="jar://$PROJECT_DIR$/../../griffon/latest/lib/commons-cli-1.0.jar!/" />
+        <root url="jar://$PROJECT_DIR$/../../griffon/latest/lib/junit-3.8.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/../../griffon/latest/lib/groovy-all-1.6.4.jar!/" />
+        <root url="jar://$PROJECT_DIR$/../../griffon/latest/lib/swingxbuilder-0.1.6-SNAPSHOT.jar!/" />
+        <root url="jar://$PROJECT_DIR$/../../griffon/latest/lib/spring-2.5.6.jar!/" />
+        <root url="jar://$PROJECT_DIR$/../../griffon/latest/dist/griffon-rt-0.2-BETA.jar!/" />
+        <root url="jar://$PROJECT_DIR$/../../griffon/latest/dist/griffon-resources-0.2-BETA.jar!/" />
+        <root url="jar://$PROJECT_DIR$/../../griffon/latest/dist/griffon-cli-0.2-BETA.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
