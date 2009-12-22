@@ -18,7 +18,8 @@ class WhatController {
     }
 
     def makeTally(){
-        view.tallyText.text  = new Tally().doTally(view.ta.text)
+      // extra new lines make sure last day is counted
+        view.tallyText.text  = new Tally().doTally(view.ta.text+'\n\n')
         view.tally.show()
     }
   
