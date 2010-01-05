@@ -12,6 +12,7 @@ class WhatModel {
     // if new day, insert new day header
     // detect new day by seeing if now is less than last time.
     def lines = text.split('\n')
+    if(lines[-1].size()>sdf.toPattern().size() + 1){
     def lastTime = lines[-1][1..sdf.toPattern().size() + 1]
     println "lastTime is " + lastTime
     Date last = sdf.parse(lastTime)
@@ -22,6 +23,7 @@ class WhatModel {
       }
     } catch (e) {
       // just means last line wasn't a timestamp... no worries.
+    }
     }
 
     text += '\n ' + sdf.format(new Date())
@@ -39,6 +41,6 @@ class WhatModel {
 
   String getTally() {
     println "Doing tally on " + text
-    new Tally().doTally(text);
+    new Tally().doTally(text+'\n\n');
   }
 }
