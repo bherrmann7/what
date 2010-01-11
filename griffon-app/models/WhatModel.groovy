@@ -15,8 +15,8 @@ class WhatModel {
     if(lines[-1].size()>sdf.toPattern().size() + 1){
     def lastTime = lines[-1][1..sdf.toPattern().size() + 1]
     println "lastTime is " + lastTime
-    Date last = sdf.parse(lastTime)
     try {
+      Date last = sdf.parse(lastTime)
       Date now = sdf.parse(sdf.format(new Date()))
       if (last.after(now)) {
         text += '\n\n'+new SimpleDateFormat('EEEE, MMMM d').format(new Date())        

@@ -1,5 +1,7 @@
 class Tally {
 
+  def html = true
+
   int minSinceMidnight(time) {
     def min = Integer.parseInt(time[0..1]) * 60 + Integer.parseInt(time[3..4])
     if (time[0..1] != '12' && time[5] == 'P')
@@ -50,15 +52,25 @@ class Tally {
 
       matcher = line =~ /^\w+,\s\w+\s\w+/
       if (matcher) {
-        if (currentDay)
-          addLine currentDay + '\t' + day / 60  +'\t' + endWith
+        if (currentDay) {
+            if(html){
+                  addLine "<tr><td>$currentDay</td><td>${day / 60}<td>$endWith</td></tr>"
+            } else {
+                  addLine currentDay + '\t' + day / 60  +'\t' + endWith
+            }
+        }
         day = 0
         currentDay = line
       }
       
     }
-    if (currentDay)
-      addLine currentDay + '\t' + day / 60  +'\t' + endWith
+    if (currentDay) {
+        if(html){
+          addLine "<tr><td>$currentDay</td><td>${day / 60}<td>$endWith</td></tr>"
+            } else {
+              addLine currentDay + '\t' + day / 60  +'\t' + endWith
+        }
+    }
     
     addLine "total ${total / 60} hours"
     sb.toString()
