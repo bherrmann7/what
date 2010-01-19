@@ -2,6 +2,8 @@ class Tally {
 
   def html = true
 
+  int rate = new File(System.properties["user.home"] + "/.rate").text.toInteger();
+
   int minSinceMidnight(time) {
     def min = Integer.parseInt(time[0..1]) * 60 + Integer.parseInt(time[3..4])
     if (time[0..1] != '12' && time[5] == 'P')
@@ -54,7 +56,7 @@ class Tally {
       if (matcher) {
         if (currentDay) {
             if(html){
-                  addLine "<tr><td>$currentDay</td><td>${day / 60}<td>$endWith</td></tr>"
+                  addLine "<tr><td>$currentDay</td><td>${day / 60}</td><td>$endWith</td></tr>"
             } else {
                   addLine currentDay + '\t' + day / 60  +'\t' + endWith
             }
@@ -71,8 +73,9 @@ class Tally {
               addLine currentDay + '\t' + day / 60  +'\t' + endWith
         }
     }
-    
-    addLine "total ${total / 60} hours"
+
+    addLine "</table><br/><br/>"
+    addLine "     Total = ${total / 60} hours at \$${rate}/hr = ${total/60*rate}"
     sb.toString()
   }
 }
