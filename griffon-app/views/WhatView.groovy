@@ -30,7 +30,6 @@ application(title: 'What are you doing?', pack: true, locationByPlatform: true) 
             textArea(
                     id: 'ta', columns: 60, rows: 30,
                     text: bind { model.text }
-
             )
         }
 
@@ -45,10 +44,10 @@ about = dialog(
         locationByPlatform: true)
         {
             panel(border: emptyBorder(3)) {
-                gridLayout(cols: 1, rows: 2)
-                label(icon: imageIcon("TheBobs.jpg"))
-                panel {
-                    button(text: "Ok")
+                borderLayout()
+                label(constraints: CENTER, icon: imageIcon("TheBobs.jpg"))
+                panel(constraints: SOUTH) {
+                    button(text: "Ok",  actionPerformed: {dispose()})
                 }
             }
         }
@@ -61,11 +60,11 @@ tally = dialog(
                 borderLayout()
                 scrollPane(constraints: CENTER) {
                     ta = textArea(
-                            id: 'tallyText', columns: 60, rows: 30
+                            id: 'tallyText', columns: 60, rows: 15
                     )
                 }
                 panel(constraints: SOUTH) {
-                    button(text: "Ok")
+                    button(text: "Ok",  actionPerformed: {dispose()})
                 }
             }
         }

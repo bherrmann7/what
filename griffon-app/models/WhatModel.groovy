@@ -32,7 +32,7 @@ class WhatModel {
   }
 
 
-  String text
+  String text = ''
 
   def save = {
     file.text = text;

@@ -55,27 +55,27 @@ class Tally {
       matcher = line =~ /^\w+,\s\w+\s\w+/
       if (matcher) {
         if (currentDay) {
-            if(html){
-                  addLine "<tr><td>$currentDay</td><td>${day / 60}</td><td>$endWith</td></tr>"
-            } else {
-                  addLine currentDay + '\t' + day / 60  +'\t' + endWith
-            }
+          if (html) {
+            addLine "<tr><td>$currentDay</td><td>${day / 60}</td><td>$endWith</td></tr>"
+          } else {
+            addLine currentDay + '\t' + day / 60 + '\t' + endWith
+          }
         }
         day = 0
         currentDay = line
       }
-      
+
     }
     if (currentDay) {
-        if(html){
-          addLine "<tr><td>$currentDay</td><td>${day / 60}<td>$endWith</td></tr>"
-            } else {
-              addLine currentDay + '\t' + day / 60  +'\t' + endWith
-        }
+      if (html) {
+        addLine "<tr><td>$currentDay</td><td>${day / 60}<td>$endWith</td></tr>"
+      } else {
+        addLine currentDay + '\t' + day / 60 + '\t' + endWith
+      }
     }
 
     addLine "</table><br/><br/>"
-    addLine "     Total = ${total / 60} hours at \$${rate}/hr = ${total/60*rate}"
+    addLine "     Total = ${total / 60} hours at \$${rate}/hr = ${total / 60 * rate}"
     sb.toString()
   }
 }
