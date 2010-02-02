@@ -11,11 +11,12 @@ class Tally {
     min
   }
 
-  StringBuilder sb = new StringBuilder()
-  def addLine = {
-    sb.append(it)
-    sb.append('\n')
+  def days = []
+  
+  def addDay = { date, hours, summary ->
+    days << [ date: date, hours:hours, summary: summary ]
   }
+  
   def total = 0
   def day = 0
 
@@ -55,11 +56,7 @@ class Tally {
       matcher = line =~ /^\w+,\s\w+\s\w+/
       if (matcher) {
         if (currentDay) {
-          if (html) {
-            addLine "<tr><td>$currentDay</td><td>${day / 60}</td><td>$endWith</td></tr>"
-          } else {
-            addLine currentDay + '\t' + day / 60 + '\t' + endWith
-          }
+          addDay currentDay, day/60, endWith
         }
         day = 0
         currentDay = line
@@ -67,15 +64,26 @@ class Tally {
 
     }
     if (currentDay) {
-      if (html) {
-        addLine "<tr><td>$currentDay</td><td>${day / 60}<td>$endWith</td></tr>"
-      } else {
-        addLine currentDay + '\t' + day / 60 + '\t' + endWith
-      }
+      addDay currentDay, day/60, endWith
     }
 
-    addLine "</table><br/><br/>"
-    addLine "     Total = ${total / 60} hours at \$${rate}/hr = ${total / 60 * rate}"
+    StringBuilder sb = new StringBuilder()
+
+    // text version
+    days.each { day ->
+      sb.append day.date.padRight(30) + day.hours.toString().padRight(4)+ '   ' + day.summary +'\n'
+    }
+    sb.append('\n')
+
+    // html version
+    days.each { day ->
+      sb.append "<tr><td>$day.date</td><td>$day.hours</td><td>$day.summary</td></tr>\n"
+    }
+
+    sb.append "</table><br/><br/>\n"
+    sb.append "     Total = ${total / 60} hours at \$${rate}/hr = \$${total / 60 * rate}"
+
+
     sb.toString()
   }
 }
