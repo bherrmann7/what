@@ -29,7 +29,16 @@ class Tally {
     def matcher
     def endWith = ' '
 
+    boolean stopMarker
+
     file.eachLine {line ->
+      if(stopMarker)
+        return
+      if (line.trim().equals('-')) {
+        stopMarker = true;
+        return;
+      }
+      
       matcher = line =~ /^ (\d\d:\d\d[AP]M)/
       if (matcher) {
         def time = matcher[0][1]

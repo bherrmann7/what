@@ -28,7 +28,7 @@ application(title: 'What are you doing?', pack: true, locationByPlatform: true) 
 
         scrollPane(constraints: CENTER) {
             textArea(
-                    id: 'ta', columns: 60, rows: 30,
+                    lineWrap: true, id: 'ta', columns: 60, rows: 30,
                     text: bind { model.text }
             )
         }
