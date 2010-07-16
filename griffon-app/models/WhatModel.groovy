@@ -2,14 +2,42 @@ import java.text.SimpleDateFormat
 
 class WhatModel {
 
-  File file = new File(System.properties["user.home"] + "/.doing");
-  SimpleDateFormat sdf = new java.text.SimpleDateFormat("hh:mma ")
+    File base
 
-  WhatModel() {
-    if (file.exists())
-      text = file.text
-    else {
-      text = '''
+    String currentCustomer = 'default'
+
+    List<String> customers
+
+    def currentFile = {
+        new File(base, "doing-$currentCustomer");
+    }
+    SimpleDateFormat sdf = new java.text.SimpleDateFormat("hh:mma ")
+
+    String getCurrentCustomer() {
+        return currentCustomer
+    }
+
+    void setCurrentCustomer(currentCustomer) {
+        this.currentCustomer = currentCustomer;
+        new File(base,'currentCustomer').text = currentCustomer
+        loadText()
+    }
+
+    WhatModel() {
+        base = new File(System.properties["user.home"] + "/.what")
+        customers = base.list().findAll { it.startsWith('doing') }.collect { it['doing-'.size()..-1] }
+        File defaultCustomer = new File(base,'currentCustomer')
+        if(defaultCustomer.exists() && defaultCustomer.text in customers) {
+            currentCustomer = defaultCustomer.text
+        }
+        loadText()
+    }
+
+    void loadText() {
+        if (currentFile().exists())
+            text = currentFile().text
+        else {
+            text = '''
 Welcome!  Thanks for trying What.
 "What" is a simple program for keeping track of "What it is you say you do around here?" I use What for generating weekly status reports, and for generating invoices.
 
@@ -35,39 +63,39 @@ s: flim flam sorting
 
 At the beginning of a new day, What adds a new "DDDD, MM NN" heading.    If you have any questions, email bob@jadn.com
 '''
-    }
-
-    // if new day, insert new day header
-    // detect new day by seeing if now is less than last time.
-    def lines = text.split('\n')
-    if (lines[-1].size() > sdf.toPattern().size() + 1) {
-      def lastTime = lines[-1][1..sdf.toPattern().size() + 1]
-      println "lastTime is " + lastTime
-      try {
-        Date last = sdf.parse(lastTime)
-        Date now = sdf.parse(sdf.format(new Date()))
-        if (last.after(now)) {
-          text += '\n\n' + new SimpleDateFormat('EEEE, MMMM d').format(new Date())
         }
-      } catch (e) {
-        // just means last line wasn't a timestamp... no worries.
-      }
+
+        // if new day, insert new day header
+        // detect new day by seeing if now is less than last time.
+        def lines = text.split('\n')
+        if (lines[-1].size() > sdf.toPattern().size() + 1) {
+            def lastTime = lines[-1][1..sdf.toPattern().size() + 1]
+            println "lastTime is " + lastTime
+            try {
+                Date last = sdf.parse(lastTime)
+                Date now = sdf.parse(sdf.format(new Date()))
+                if (last.after(now)) {
+                    text += '\n\n' + new SimpleDateFormat('EEEE, MMMM d').format(new Date())
+                }
+            } catch (e) {
+                // just means last line wasn't a timestamp... no worries.
+            }
+        }
+
+        text += '\n ' + sdf.format(new Date())
+        textAsLoaded = text
     }
 
-    text += '\n ' + sdf.format(new Date())
+    String textAsLoaded
+    String text = ''
 
-  }
+    def save = {
+        currentFile().text = text;
+        println "Saved text -- to ${currentFile()}"
+    }
 
-
-  String text = ''
-
-  def save = {
-    file.text = text;
-    println "Saved $text"
-  }
-
-  String getTally() {
-    println "Doing tally on " + text
-    new Tally().doTally(text + '\n\n');
-  }
+    String getTally() {
+        println "Doing tally on " + text
+        new Tally().doTally(text + '\n\n');
+    }
 }

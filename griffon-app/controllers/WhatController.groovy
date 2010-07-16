@@ -28,4 +28,18 @@ class WhatController {
     }
   }
 
+  def switchCustomer(String customer){
+      model.text = view.ta.text
+      if (model.text != model.textAsLoaded ) {
+        println "Saved changes to $customer"
+        model.save()
+      }
+      
+      model.setCurrentCustomer(customer);
+      model.customers.each {
+          view["customer-$it"].enabled = (it != customer)
+      }
+      view.ta.text = model.text
+  }
+
 }

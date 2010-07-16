@@ -26,6 +26,13 @@ application(title: 'What are you doing?', pack: true, locationByPlatform: true) 
     panel(border: emptyBorder(6)) {
         borderLayout()
 
+        panel(constraints: NORTH) {
+            model.customers.each { customer ->
+                button(text: customer, id: "customer-$customer", enabled: (model.currentCustomer != customer),
+                        actionPerformed: {controller.switchCustomer(customer)} )
+            }
+        }
+
         scrollPane(constraints: CENTER) {
             textArea(
                     lineWrap: true, id: 'ta', columns: 60, rows: 30,
