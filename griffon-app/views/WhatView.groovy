@@ -27,9 +27,12 @@ application(title: 'What are you doing?', pack: true, locationByPlatform: true) 
         borderLayout()
 
         panel(constraints: NORTH) {
-            model.customers.each { customer ->
-                button(text: customer, id: "customer-$customer", enabled: (model.currentCustomer != customer),
-                        actionPerformed: {controller.switchCustomer(customer)} )
+            buttonGroup().with { group ->
+                model.customers.each { customer ->
+                    radioButton(text: customer,
+                            buttonGroup: group, selected: (model.currentCustomer == customer),
+                            actionPerformed: {controller.switchCustomer(customer)})
+                }
             }
         }
 
@@ -54,7 +57,7 @@ about = dialog(
                 borderLayout()
                 label(constraints: CENTER, icon: imageIcon("TheBobs.jpg"))
                 panel(constraints: SOUTH) {
-                    button(text: "Ok",  actionPerformed: {dispose()})
+                    button(text: "Ok", actionPerformed: {dispose()})
                 }
             }
         }
@@ -71,7 +74,7 @@ tally = dialog(
                     )
                 }
                 panel(constraints: SOUTH) {
-                    button(text: "Ok",  actionPerformed: {dispose()})
+                    button(text: "Ok", actionPerformed: {dispose()})
                 }
             }
         }

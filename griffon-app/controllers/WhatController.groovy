@@ -36,9 +36,6 @@ class WhatController {
       }
       
       model.setCurrentCustomer(customer);
-      model.customers.each {
-          view["customer-$it"].enabled = (it != customer)
-      }
       view.ta.text = model.text
   }
 
