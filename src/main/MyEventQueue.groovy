@@ -24,8 +24,8 @@ class MyEventQueue extends EventQueue {
                 int IdleSeconds = (System.currentTimeMillis() - lastActivity) / 1000;
                 //println "Idle: "+IdleSeconds;
 
-                // After 15 minutes, give up.
-                if (IdleSeconds > 15 * 60) {
+                // After 10 minutes, give up.
+                if (IdleSeconds > 10 * 60) {
                     System.exit(1);
                 }
             }
