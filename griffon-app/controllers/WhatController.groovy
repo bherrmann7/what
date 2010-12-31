@@ -31,7 +31,7 @@ class WhatController {
   def switchCustomer(String customer){
       model.text = view.ta.text
       if (model.text != model.textAsLoaded ) {
-        println "Saved changes to $customer"
+        //println "Saved changes to $customer"
         model.save()
       }
       

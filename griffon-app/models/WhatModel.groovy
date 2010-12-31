@@ -37,11 +37,11 @@ class WhatModel {
         if (currentFile().exists())
             text = currentFile().text
         else {
-            text = '''
+            text = """
 Welcome!  Thanks for trying What.
 "What" is a simple program for keeping track of "What it is you say you do around here?" I use What for generating weekly status reports, and for generating invoices.
 
-When "What" starts up, it always loads $HOME/.doing into the textarea, and adds a time stamp.
+When "What" starts up, it always loads \$HOME/.what/doing-${currentCustomer} into this textarea, and adds a time stamp.
 An initial run might look like this,
 
  03:00PM
@@ -56,13 +56,16 @@ I run What out of cron at the top of every hour.   After 15 minutes of no mouse 
 Here is a typical day,
 
 Monday, September 15
-07:00AM coffe
+07:00AM coffee
 09:00AM coded flim flam sorting
+12:00PM lunch
+--
+01:00PM rending sorted flim flam
 03:30PM scoot
-s: flim flam sorting
+s: flim flam sorting and display
 
 At the beginning of a new day, What adds a new "DDDD, MM NN" heading.    If you have any questions, email bob@jadn.com
-'''
+"""
         }
 
         // if new day, insert new day header
@@ -70,7 +73,7 @@ At the beginning of a new day, What adds a new "DDDD, MM NN" heading.    If you 
         def lines = text.split('\n')
         if (lines[-1].size() > sdf.toPattern().size() + 1) {
             def lastTime = lines[-1][1..sdf.toPattern().size() + 1]
-            println "lastTime is " + lastTime
+            //println "lastTime is " + lastTime
             try {
                 Date last = sdf.parse(lastTime)
                 Date now = sdf.parse(sdf.format(new Date()))
@@ -91,11 +94,11 @@ At the beginning of a new day, What adds a new "DDDD, MM NN" heading.    If you 
 
     def save = {
         currentFile().text = text;
-        println "Saved text -- to ${currentFile()}"
+        //println "Saved text -- to ${currentFile()}"
     }
 
     String getTally() {
-        println "Doing tally on " + text
+        //println "Doing tally on " + text
         new Tally().doTally(text + '\n\n');
     }
 }

@@ -78,9 +78,19 @@ class Tally {
 
     StringBuilder sb = new StringBuilder()
 
+    def weeklyTotal = 0
+
     // text version
     days.each { day ->
+      if(day.date.startsWith("Mon")) {
+         sb.append("weekly total: ${weeklyTotal}\n\n")
+         weeklyTotal = 0
+      }
+      weeklyTotal += day.hours
       sb.append day.date.padRight(30) + day.hours.toString().padRight(4)+ '   ' + day.summary +'\n'
+    }
+    if(weeklyTotal){
+        sb.append("weekly total (so far): ${weeklyTotal}\n")
     }
     sb.append('\n')
 
