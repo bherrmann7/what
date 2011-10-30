@@ -1,3 +1,3 @@
-import griffon.util.GriffonPlatformHelper
-
-GriffonPlatformHelper.tweakForNativePlatform(app)
+//import griffon.util.GriffonPlatformHelper
+//
+//GriffonPlatformHelper.tweakForNativePlatform(app)

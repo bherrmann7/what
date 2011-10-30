@@ -27,13 +27,16 @@ application(title: 'What are you doing?', pack: true, locationByPlatform: true) 
         borderLayout()
 
         panel(constraints: NORTH) {
+            comboBox(items: model.customers, selectedItem: model.currentCustomer, actionPerformed: {controller.switchCustomer(it.source.selectedItem)})
+            /*
             buttonGroup().with { group ->
                 model.customers.each { customer ->
-                    radioButton(text: customer,
-                            buttonGroup: group, selected: (model.currentCustomer == customer),
-                            actionPerformed: {controller.switchCustomer(customer)})
+                    text: customer,
+                                                buttonGroup: group, selected: (model.currentCustomer == customer),
+                                                actionPerformed: {controller.switchCustomer(customer)}
                 }
             }
+            */
         }
 
         scrollPane(constraints: CENTER) {

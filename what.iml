@@ -24,6 +24,8 @@
         <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="griffon-0.9.4" level="application" />
+    <orderEntry type="library" name="griffon-0.9.4" level="application" />
   </component>
 </module>
 
