@@ -9,13 +9,12 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test/unit" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/test/integration" isTestSource="true" />
-      <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="griffon-0.2" level="application" />
-    <orderEntry type="module-library">
-      <library name="Griffon:lib">
+    <orderEntry type="library" name="griffon-0.9.4" level="application" />
+    <orderEntry type="module-library" exported="">
+      <library name="Griffon:lib (what)">
         <CLASSES>
           <root url="file://$MODULE_DIR$/lib" />
         </CLASSES>
@@ -24,8 +23,6 @@
         <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="griffon-0.9.4" level="application" />
-    <orderEntry type="library" name="griffon-0.9.4" level="application" />
   </component>
 </module>
 
