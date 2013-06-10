@@ -50,6 +50,7 @@ class WhatController {
         template = template[0..spos-1] + content + template[(spos+('@content@'.size())+1)..-1]
         template = template.replaceAll('@content@', content)
         new File("/home/bob/work/inno/invoices/inv.tout").text = template
+        // executes the template and displays the invoice in a pdf viewer
         "groovy /home/bob/work/inno/invoices/inv.tout".execute()
     }
 
